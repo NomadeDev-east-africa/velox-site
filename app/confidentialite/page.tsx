@@ -134,6 +134,10 @@ export default function Confidentialite() {
               Haboneabdoulrazak@gmail.com
             </a>
             <br />
+            <a href="tel:+25377453817" className="font-semibold text-neon">
+              +253 77 45 38 17
+            </a>
+            <br />
             <a href="tel:+33758901400" className="font-semibold text-neon">
               +33 7 58 90 14 00
             </a>

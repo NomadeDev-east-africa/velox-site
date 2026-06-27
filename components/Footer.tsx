@@ -14,6 +14,7 @@ const cols = [
     title: "Contact",
     links: [
       { label: "Haboneabdoulrazak@gmail.com", href: "mailto:Haboneabdoulrazak@gmail.com" },
+      { label: "+253 77 45 38 17", href: "tel:+25377453817" },
       { label: "+33 7 58 90 14 00", href: "tel:+33758901400" },
       { label: "Djibouti-ville, Djibouti", href: "#" },
     ],
