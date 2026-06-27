@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+/* ============================================================
+   VELOX — Design System
+   Livraison & VTC · Djibouti · Vert néon sur noir
+   ============================================================ */
+
+@theme {
+  /* Surfaces */
+  --color-void: #050505;
+  --color-ink: #0b0d0b;
+  --color-charcoal: #101310;
+  --color-graphite: #161a16;
+
+  /* Light */
+  --color-white: #ffffff;
+  --color-mist: #c7cdc7;
+  --color-muted: #8a938a;
+  --color-faint: #5c655c;
+
+  /* Neon green (brand) */
+  --color-neon: #9bff3a;
+  --color-neon-soft: #b6f583;
+  --color-neon-deep: #76e23c;
+  --color-neon-dark: #4f8f24;
+
+  --font-display: var(--font-space), system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root {
+  --neon-gradient: linear-gradient(100deg, #76e23c 0%, #9bff3a 45%, #b6f583 100%);
+}
+
+* {
+  border-color: color-mix(in srgb, var(--color-neon) 12%, transparent);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--color-void);
+  color: var(--color-white);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+::selection {
+  background: var(--color-neon);
+  color: var(--color-void);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-void);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--color-neon-dark), var(--color-neon-deep));
+  border-radius: 10px;
+  border: 2px solid var(--color-void);
+}
+
+/* ----------- Reusable utilities ----------- */
+
+.text-neon-gradient {
+  background: var(--neon-gradient);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.neon-line {
+  background: linear-gradient(90deg, transparent, var(--color-neon), transparent);
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-neon);
+}
+
+.glass {
+  background: color-mix(in srgb, var(--color-ink) 72%, transparent);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+}
+
+.card-glow {
+  box-shadow: 0 30px 80px -40px rgba(0, 0, 0, 0.9);
+}
+
+.neon-glow {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-neon) 14%, transparent),
+    0 20px 60px -20px color-mix(in srgb, var(--color-neon) 30%, transparent);
+}
+
+.grid-bg {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse at 50% 0%, #000 30%, transparent 75%);
+}
+
+/* Reveal default state (JS adds .is-visible) */
+.reveal {
+  opacity: 0;
+  transform: translateY(34px);
+  transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Neon button */
+.btn-neon {
+  position: relative;
+  overflow: hidden;
+  background: var(--neon-gradient);
+  background-size: 200% auto;
+  color: #06210a;
+  box-shadow: 0 10px 30px -8px color-mix(in srgb, var(--color-neon) 55%, transparent);
+  transition: background-position 0.6s var(--ease-out), transform 0.4s var(--ease-out),
+    box-shadow 0.4s var(--ease-out);
+}
+.btn-neon:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px -8px color-mix(in srgb, var(--color-neon) 70%, transparent);
+}
+
+.btn-ghost {
+  border: 1px solid color-mix(in srgb, var(--color-neon) 40%, transparent);
+  color: var(--color-white);
+  transition: all 0.4s var(--ease-out);
+}
+.btn-ghost:hover {
+  border-color: var(--color-neon);
+  background: color-mix(in srgb, var(--color-neon) 10%, transparent);
+  transform: translateY(-2px);
+}
+
+/* Phone frame */
+.phone-frame {
+  border-radius: 38px;
+  padding: 10px;
+  background: linear-gradient(160deg, #1b201b, #070807);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.7), 0 0 60px -20px color-mix(in srgb, var(--color-neon) 30%, transparent);
+}
+.phone-frame img {
+  border-radius: 28px;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+@keyframes scroll-hint {
+  0% { transform: translateY(0); opacity: 0; }
+  40% { opacity: 1; }
+  80% { transform: translateY(14px); opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.animate-float-slow { animation: float-slow 7s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  * { animation-duration: 0.001ms !important; }
+}
