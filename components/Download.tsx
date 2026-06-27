@@ -15,7 +15,9 @@ export default function Download() {
             Livraison de repas et courses VTC à Djibouti, en quelques secondes.
           </p>
           <a
-            href="#"
+            href="https://play.google.com/store/apps/details?id=dj.velox.client"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-neon mt-8 inline-flex items-center gap-2.5 rounded-full px-7 py-4 text-sm font-bold tracking-wide"
           >
             <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
