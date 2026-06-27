@@ -80,7 +80,7 @@ Téléchargez Velox et gagnez du temps, chaque jour.
 ---
 
 ## 6. Adresse e-mail de contact
-🔧 **devchirdon@gmail.com**
+🔧 **Haboneabdoulrazak@gmail.com**
 
 *Recommandation : si tu as un nom de domaine (ex. velox.dj), utilise plutôt une adresse
 professionnelle type `contact@velox.dj` ou `support@velox.dj` — ça inspire plus confiance
@@ -152,7 +152,7 @@ L'Application n'est pas destinée aux enfants de moins de 13 ans.
 Cette politique peut être mise à jour. La date en haut indique la dernière version.
 
 9. CONTACT
-Pour toute question relative à vos données : devchirdon@gmail.com
+Pour toute question relative à vos données : Haboneabdoulrazak@gmail.com
 ```
 
 ---

@@ -130,8 +130,12 @@ export default function Confidentialite() {
           <p className="mt-2 text-mist">
             Pour toute question relative à vos données :
             <br />
-            <a href="mailto:devchirdon@gmail.com" className="font-semibold text-neon">
-              devchirdon@gmail.com
+            <a href="mailto:Haboneabdoulrazak@gmail.com" className="font-semibold text-neon">
+              Haboneabdoulrazak@gmail.com
+            </a>
+            <br />
+            <a href="tel:+33758901400" className="font-semibold text-neon">
+              +33 7 58 90 14 00
             </a>
           </p>
         </div>

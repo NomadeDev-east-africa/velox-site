@@ -13,7 +13,8 @@ const cols = [
   {
     title: "Contact",
     links: [
-      { label: "devchirdon@gmail.com", href: "mailto:devchirdon@gmail.com" },
+      { label: "Haboneabdoulrazak@gmail.com", href: "mailto:Haboneabdoulrazak@gmail.com" },
+      { label: "+33 7 58 90 14 00", href: "tel:+33758901400" },
       { label: "Djibouti-ville, Djibouti", href: "#" },
     ],
   },
