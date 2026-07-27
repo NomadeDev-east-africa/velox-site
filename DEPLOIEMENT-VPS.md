@@ -117,5 +117,15 @@ pm2 restart velox
 - [ ] Nginx + certificat HTTPS actifs
 - [ ] **SEO** : `metadataBase` + image OpenGraph renseignés (`app/layout.tsx`)
 - [ ] **Liens Google Play** mis à jour (boutons « Télécharger » dans `Hero.tsx` et `Download.tsx`, actuellement `#`)
-- [ ] **URL politique de confidentialité** (`https://VOTRE-DOMAINE.com/confidentialite`) renseignée dans la Play Console
+- [ ] **URL légales renseignées dans la Play Console** — une paire par application :
+
+| Application | Package | Règles de confidentialité | Suppression du compte |
+|---|---|---|---|
+| Velox (client) | `dj.velox.client` | `/confidentialite` | — |
+| Velox Livreur | `dj.nomade.velox_livreur` | `/confidentialite-livreur` | `/suppression-donnees-livreur` |
+| Velox Driver | `dj.nomade.velox_driver` | `/confidentialite-driver` | `/suppression-donnees-driver` |
+| Velox Restaurant | `dj.nomade.velox_restaurant` | `/confidentialite-restaurant` | `/suppression-donnees-restaurant` |
+
+> Les chemins sont à préfixer du domaine réel (celui déclaré dans `metadataBase`, `app/layout.tsx`).
+> Google Play refuse une URL qui ne répond pas en HTTPS : déployer **avant** de soumettre les fiches.
 ```

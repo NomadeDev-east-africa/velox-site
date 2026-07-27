@@ -24,6 +24,12 @@ const cols = [
     links: [
       { label: "Politique de confidentialité", href: "/confidentialite" },
       { label: "Conditions d'utilisation", href: "/confidentialite" },
+      { label: "Confidentialité — App Livreur", href: "/confidentialite-livreur" },
+      { label: "Suppression des données — App Livreur", href: "/suppression-donnees-livreur" },
+      { label: "Confidentialité — App Chauffeur", href: "/confidentialite-driver" },
+      { label: "Suppression des données — App Chauffeur", href: "/suppression-donnees-driver" },
+      { label: "Confidentialité — App Restaurant", href: "/confidentialite-restaurant" },
+      { label: "Suppression des données — App Restaurant", href: "/suppression-donnees-restaurant" },
     ],
   },
 ];
@@ -64,7 +70,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-wrap justify-between gap-4 pt-6 text-sm text-faint">
-          <p>© 2026 Velox — Édité par Nomade. Tous droits réservés.</p>
+          <p>© 2026 Velox — Édité par Velox Corp. Tous droits réservés.</p>
           <p>Application disponible en français, anglais, arabe, somali et afar.</p>
         </div>
       </div>

@@ -97,7 +97,7 @@ export default function Confidentialite() {
         </span>
 
         <p className="mt-6 border-b border-white/5 pb-8 text-lg text-mist">
-          L'application Velox (« l'Application »), éditée par Nomade (« nous »), est un service de
+          L'application Velox (« l'Application »), éditée par Velox Corp (« nous »), est un service de
           livraison de repas et de transport (VTC) opérant à Djibouti. Cette politique explique
           quelles données nous collectons, pourquoi, et quels sont vos droits.
         </p>
@@ -147,7 +147,7 @@ export default function Confidentialite() {
 
       <footer className="border-t border-white/5 bg-ink">
         <div className="mx-auto flex max-w-7xl flex-wrap justify-between gap-4 px-5 py-8 text-sm text-faint sm:px-8">
-          <p>© 2026 Velox — Édité par Nomade. Tous droits réservés.</p>
+          <p>© 2026 Velox — Édité par Velox Corp. Tous droits réservés.</p>
           <Link href="/" className="text-neon">
             Retour à l'accueil
           </Link>
