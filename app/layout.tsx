@@ -17,7 +17,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://velox.dj"),
+  metadataBase: new URL("https://veloxdj.com"),
   title: "Velox — Livraison de repas & VTC à Djibouti",
   description:
     "Velox, c'est Djibouti à portée de main. Faites-vous livrer vos plats préférés et réservez une course VTC depuis une seule application, simple et rapide.",

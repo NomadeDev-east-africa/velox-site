@@ -70,7 +70,7 @@ Fichier `/etc/nginx/sites-available/velox` :
 ```nginx
 server {
     listen 80;
-    server_name VOTRE-DOMAINE.com www.VOTRE-DOMAINE.com;
+    server_name veloxdj.com www.veloxdj.com;
 
     location / {
         proxy_pass http://127.0.0.1:3000;
@@ -92,7 +92,7 @@ nginx -t && systemctl reload nginx
 
 # HTTPS gratuit Let's Encrypt
 apt install certbot python3-certbot-nginx -y
-certbot --nginx -d VOTRE-DOMAINE.com -d www.VOTRE-DOMAINE.com
+certbot --nginx -d veloxdj.com -d www.veloxdj.com
 ```
 
 ---

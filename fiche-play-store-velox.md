@@ -82,8 +82,8 @@ Téléchargez Velox et gagnez du temps, chaque jour.
 ## 6. Adresse e-mail de contact
 🔧 **Haboneabdoulrazak@gmail.com**
 
-*Recommandation : si tu as un nom de domaine (ex. velox.dj), utilise plutôt une adresse
-professionnelle type `contact@velox.dj` ou `support@velox.dj` — ça inspire plus confiance
+*Recommandation : si tu as un nom de domaine (ex. veloxdj.com), utilise plutôt une adresse
+professionnelle type `contact@veloxdj.com` ou `support@veloxdj.com` — ça inspire plus confiance
 et c'est mieux pour le support utilisateur.*
 
 ---
