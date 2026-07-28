@@ -40,11 +40,17 @@ const sections: Section[] = [
       [
         "Technique :",
         <>
-          token FCM (notifications push) · données de crash Firebase Crashlytics (débogage) ·
-          données d&apos;utilisation Firebase Analytics (mesure d&apos;audience anonymisée).
+          token FCM (notifications push) · données de crash Firebase Crashlytics (débogage).
         </>,
       ],
     ],
+    callout: (
+      <>
+        L&apos;application <strong className="text-white">n&apos;intègre pas</strong> Firebase Analytics
+        ni aucun SDK publicitaire : aucune mesure d&apos;audience, aucun identifiant publicitaire
+        (<Code>Advertising ID</Code>) n&apos;est collecté.
+      </>
+    ),
   },
   {
     n: "03",
@@ -105,8 +111,31 @@ const sections: Section[] = [
         ["Restaurateur", "Nom, statut de la livraison", "Coordination de la préparation"],
         ["Firebase (Google)", "Toutes les données listées", "Infrastructure technique"],
         ["Firebase Crashlytics", "Données techniques anonymisées", "Correction de bugs"],
+        [
+          <>
+            OSRM <Code>router.project-osrm.org</Code>
+          </>,
+          "Coordonnées GPS du livreur et coordonnées du point de livraison",
+          "Calcul de l'itinéraire routier affiché sur la carte",
+        ],
+        [
+          <>
+            CARTO <Code>basemaps.cartocdn.com</Code>
+          </>,
+          "Coordonnées de la zone de carte affichée, adresse IP",
+          "Fourniture des fonds de carte",
+        ],
       ],
     },
+    callout: (
+      <>
+        <strong className="text-white">Précision sur les services cartographiques :</strong> le calcul
+        d&apos;itinéraire transmet à OSRM la position du livreur et le point de destination, sans nom
+        ni identifiant de compte. L&apos;affichage de la carte transmet à CARTO la zone géographique
+        consultée. Aucune de ces requêtes ne contient d&apos;identité, de numéro de téléphone ou
+        d&apos;identifiant de commande.
+      </>
+    ),
     outro: (
       <strong className="text-white">Vos données ne sont jamais vendues à des tiers.</strong>
     ),

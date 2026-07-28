@@ -121,18 +121,31 @@ const sections: Section[] = [
           "Authentification, base de données, notifications",
         ],
         [
-          "Google Maps Platform",
-          "Clé API — aucune donnée personnelle",
-          "Affichage cartographique",
+          <>
+            OSRM <Code>router.project-osrm.org</Code>
+          </>,
+          "Coordonnées GPS du chauffeur et coordonnées du point de destination",
+          "Calcul de l'itinéraire routier affiché sur la carte",
         ],
         [
-          "OSRM (OpenStreetMap)",
-          "Coordonnées GPS, en requêtes anonymes",
-          "Calcul d'itinéraire",
+          <>
+            CARTO <Code>basemaps.cartocdn.com</Code>
+          </>,
+          "Coordonnées de la zone de carte affichée, adresse IP",
+          "Fourniture des fonds de carte",
         ],
         ["Firebase Crashlytics", "Rapports de plantage anonymisés", "Correction de bugs"],
       ],
     },
+    callout: (
+      <>
+        <strong className="text-white">Précision sur les services cartographiques :</strong> le calcul
+        d&apos;itinéraire transmet à OSRM la position du chauffeur et le point de destination, sans nom
+        ni identifiant de compte. L&apos;affichage de la carte transmet à CARTO la zone géographique
+        consultée. Aucune de ces requêtes ne contient d&apos;identité, de numéro de téléphone ou
+        d&apos;identifiant de course.
+      </>
+    ),
     outro: (
       <>
         Aucun autre tiers n&apos;a accès à vos données.{" "}
