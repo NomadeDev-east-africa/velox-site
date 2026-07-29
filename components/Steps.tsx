@@ -6,7 +6,15 @@ const steps = [
   { n: "03", title: "Suivez en direct", text: "Payez comme vous voulez et suivez votre commande ou votre chauffeur sur la carte." },
 ];
 
-const payments = ["💵 Espèces", "📲 Waafi", "💳 D-Money", "🏦 CAC Pay"];
+const payments = [
+  "💵 Espèces",
+  "📲 Waafi",
+  "💳 D-Money",
+  "🏦 CAC Pay",
+  "🏦 BCI Pay",
+  "🏦 Exim Bank",
+  "📲 Dahab",
+];
 
 export default function Steps() {
   return (

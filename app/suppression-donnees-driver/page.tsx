@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import {
   AppIdentityCard,
-  CONTACT_EMAILS,
+  CONTACT_EMAIL,
   ContactCard,
   DeletionSteps,
   LegalPage,
@@ -17,18 +17,13 @@ export const metadata: Metadata = {
 };
 
 const SUBJECT = "?subject=Suppression%20de%20mes%20donn%C3%A9es%20%E2%80%94%20Velox%20Driver";
-const MAILTO = `mailto:${CONTACT_EMAILS[0]}${SUBJECT}`;
-const MAILTO_ALT = `mailto:${CONTACT_EMAILS[1]}${SUBJECT}`;
+const MAILTO = `mailto:${CONTACT_EMAIL}${SUBJECT}`;
 
 const steps: ReactNode[] = [
   <>
     Envoyer un e-mail à{" "}
     <a href={MAILTO} className="font-semibold text-neon">
-      {CONTACT_EMAILS[0]}
-    </a>{" "}
-    ou{" "}
-    <a href={MAILTO_ALT} className="font-semibold text-neon">
-      {CONTACT_EMAILS[1]}
+      {CONTACT_EMAIL}
     </a>{" "}
     avec pour objet «&nbsp;Suppression de mes données — Velox Driver&nbsp;».
   </>,

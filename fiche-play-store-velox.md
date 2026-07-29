@@ -49,7 +49,7 @@ réservez une course VTC depuis une seule application, simple et rapide.
 • Suivez l'approche de votre chauffeur sur la carte.
 
 💳 PAIEMENT FLEXIBLE
-• Espèces, Waafi, D-Money, CAC Pay — payez comme vous voulez.
+• Espèces, Waafi, D-Money, CAC Pay, BCI Pay, Exim Bank, Dahab — payez comme vous voulez.
 
 ⭐ FIDÉLITÉ
 • Gagnez des points à chaque commande et utilisez-les pour réduire vos frais.
@@ -80,7 +80,7 @@ Téléchargez Velox et gagnez du temps, chaque jour.
 ---
 
 ## 6. Adresse e-mail de contact
-🔧 **Haboneabdoulrazak@gmail.com**
+🔧 **veloxon253@gmail.com**
 
 *Recommandation : si tu as un nom de domaine (ex. veloxdj.com), utilise plutôt une adresse
 professionnelle type `contact@veloxdj.com` ou `support@veloxdj.com` — ça inspire plus confiance
@@ -152,7 +152,7 @@ L'Application n'est pas destinée aux enfants de moins de 13 ans.
 Cette politique peut être mise à jour. La date en haut indique la dernière version.
 
 9. CONTACT
-Pour toute question relative à vos données : Haboneabdoulrazak@gmail.com
+Pour toute question relative à vos données : veloxon253@gmail.com
 ```
 
 ---

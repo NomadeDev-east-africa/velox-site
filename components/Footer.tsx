@@ -1,4 +1,5 @@
-import Image from "next/image";
+import Logo from "./Logo";
+import { CONTACT_CITY, CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_HREF, MAILTO } from "@/lib/contact";
 
 const cols = [
   {
@@ -13,10 +14,9 @@ const cols = [
   {
     title: "Contact",
     links: [
-      { label: "Haboneabdoulrazak@gmail.com", href: "mailto:Haboneabdoulrazak@gmail.com" },
-      { label: "+253 77 45 38 17", href: "tel:+25377453817" },
-      { label: "+33 7 58 90 14 00", href: "tel:+33758901400" },
-      { label: "Djibouti-ville, Djibouti", href: "#" },
+      { label: CONTACT_EMAIL, href: MAILTO },
+      { label: CONTACT_PHONE, href: CONTACT_PHONE_HREF },
+      { label: CONTACT_CITY, href: "#" },
     ],
   },
   {
@@ -40,12 +40,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
         <div className="grid gap-10 border-b border-white/5 pb-12 md:grid-cols-[1.6fr_1fr_1fr_1fr]">
           <div>
-            <span
-              className="relative block h-14 w-40"
-              style={{ filter: "drop-shadow(0 0 14px rgba(155,255,58,.25))" }}
-            >
-              <Image src="/images/logo.png" alt="Velox" fill className="object-contain object-left" />
-            </span>
+            <Logo size="lg" />
             <p className="mt-4 text-sm text-muted">
               Service national djiboutien — Livraison &amp; VTC.
               <br />

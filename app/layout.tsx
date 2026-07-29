@@ -32,9 +32,21 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Velox — Livraison de repas & VTC à Djibouti",
     description:
-      "Faites-vous livrer vos plats préférés et réservez une course VTC depuis une seule application. Chaque seconde compte.",
+      "Faites-vous livrer vos plats préférés et réservez une course VTC depuis une seule application. Disponible sur l'App Store et Google Play. Chaque seconde compte.",
     type: "website",
     locale: "fr_FR",
+    siteName: "Velox",
+    url: "/",
+    images: [
+      { url: "/images/og-velox.png", width: 1200, height: 630, alt: "Velox — Livraison & VTC à Djibouti" },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Velox — Livraison de repas & VTC à Djibouti",
+    description:
+      "Livraison de repas et courses VTC à Djibouti, depuis une seule application. Disponible sur iPhone et Android.",
+    images: ["/images/og-velox.png"],
   },
 };
 

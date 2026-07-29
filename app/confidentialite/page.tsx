@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import Logo from "@/components/Logo";
+import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_HREF, MAILTO } from "@/lib/contact";
 
 export const metadata: Metadata = {
   title: "Politique de confidentialité — Velox",
@@ -72,8 +73,8 @@ export default function Confidentialite() {
     <>
       <header className="glass fixed inset-x-0 top-0 z-50 border-b border-neon/10 py-3">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8">
-          <Link href="/" className="relative h-9 w-28" style={{ filter: "drop-shadow(0 0 14px rgba(155,255,58,.35))" }}>
-            <Image src="/images/logo.png" alt="Velox" fill className="object-contain object-left" />
+          <Link href="/" aria-label="Velox — accueil">
+            <Logo size="sm" />
           </Link>
           <Link
             href="/#telecharger"
@@ -130,16 +131,12 @@ export default function Confidentialite() {
           <p className="mt-2 text-mist">
             Pour toute question relative à vos données :
             <br />
-            <a href="mailto:Haboneabdoulrazak@gmail.com" className="font-semibold text-neon">
-              Haboneabdoulrazak@gmail.com
+            <a href={MAILTO} className="font-semibold text-neon">
+              {CONTACT_EMAIL}
             </a>
             <br />
-            <a href="tel:+25377453817" className="font-semibold text-neon">
-              +253 77 45 38 17
-            </a>
-            <br />
-            <a href="tel:+33758901400" className="font-semibold text-neon">
-              +33 7 58 90 14 00
+            <a href={CONTACT_PHONE_HREF} className="font-semibold text-neon">
+              {CONTACT_PHONE}
             </a>
           </p>
         </div>

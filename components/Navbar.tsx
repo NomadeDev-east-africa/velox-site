@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import clsx from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
+import Logo from "./Logo";
 
 const links = [
   { href: "#services", label: "Services" },
@@ -34,16 +34,8 @@ export default function Navbar() {
       )}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8">
-        <a href="#top" className="flex items-center gap-3 group">
-          <span
-            className={clsx(
-              "relative transition-all duration-500",
-              scrolled ? "h-9 w-28" : "h-11 w-32"
-            )}
-            style={{ filter: "drop-shadow(0 0 14px rgba(155,255,58,.35))" }}
-          >
-            <Image src="/images/logo.png" alt="Velox" fill className="object-contain object-left" />
-          </span>
+        <a href="#top" aria-label="Velox — haut de page" className="transition-all duration-500">
+          <Logo size={scrolled ? "sm" : "md"} />
         </a>
 
         <ul className="hidden items-center gap-9 md:flex">

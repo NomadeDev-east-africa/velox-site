@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
+import StoreBadges from "./StoreBadges";
 
 export default function Download() {
   return (
@@ -13,18 +14,9 @@ export default function Download() {
           </h2>
           <p className="mt-4 text-muted">
             Livraison de repas et courses VTC à Djibouti, en quelques secondes.
+            Disponible sur iPhone et Android.
           </p>
-          <a
-            href="https://play.google.com/store/apps/details?id=dj.velox.client"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-neon mt-8 inline-flex items-center gap-2.5 rounded-full px-7 py-4 text-sm font-bold tracking-wide"
-          >
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-              <path d="M3 20.5V3.5c0-.6.3-1.1.8-1.4L13.5 12 3.8 21.9c-.5-.3-.8-.8-.8-1.4zM16.8 15.3l-2.4-2.4 2.4-2.4 2.9 1.7c.9.5.9 1.8 0 2.3l-2.9 1.7zM5.3 2.2l9.5 5.5-2.1 2.1L5.3 2.2zM12.7 14.2l2.1 2.1-9.5 5.5 7.4-7.6z" />
-            </svg>
-            Disponible sur Google Play
-          </a>
+          <StoreBadges className="mt-8" />
         </div>
 
         <div className="relative flex justify-center">

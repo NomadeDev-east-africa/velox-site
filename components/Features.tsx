@@ -2,7 +2,7 @@ import Reveal from "./Reveal";
 
 const features = [
   { icon: "📍", title: "Suivi en temps réel", text: "Visualisez la position de votre livreur ou de votre chauffeur, en direct sur la carte." },
-  { icon: "💳", title: "Paiement flexible", text: "Espèces, Waafi, D-Money, CAC Pay. Payez comme vous voulez, en toute simplicité." },
+  { icon: "💳", title: "Paiement flexible", text: "Espèces, Waafi, D-Money, CAC Pay, BCI Pay, Exim Bank, Dahab. Payez comme vous voulez, en toute simplicité." },
   { icon: "⭐", title: "Fidélité", text: "Gagnez des points à chaque commande et utilisez-les pour réduire vos frais." },
   { icon: "🌍", title: "Multilingue", text: "Français, anglais, arabe, somali et afar — Velox parle votre langue." },
   { icon: "⚡", title: "Rapide & simple", text: "Commandez ou réservez en quelques secondes, sans complication." },

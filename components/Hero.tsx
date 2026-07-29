@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import StoreBadges from "./StoreBadges";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -65,21 +66,11 @@ export default function Hero() {
             « Chaque seconde compte. »
           </motion.p>
 
-          <motion.div variants={item} className="mt-9 flex flex-wrap items-center gap-4">
-            <a
-              href="https://play.google.com/store/apps/details?id=dj.velox.client"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-neon inline-flex items-center gap-2.5 rounded-full px-7 py-4 text-sm font-bold tracking-wide"
-            >
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                <path d="M3 20.5V3.5c0-.6.3-1.1.8-1.4L13.5 12 3.8 21.9c-.5-.3-.8-.8-.8-1.4zM16.8 15.3l-2.4-2.4 2.4-2.4 2.9 1.7c.9.5.9 1.8 0 2.3l-2.9 1.7zM5.3 2.2l9.5 5.5-2.1 2.1L5.3 2.2zM12.7 14.2l2.1 2.1-9.5 5.5 7.4-7.6z" />
-              </svg>
-              Google Play
-            </a>
+          <motion.div variants={item} className="mt-9">
+            <StoreBadges />
             <a
               href="#services"
-              className="btn-ghost rounded-full px-7 py-4 text-sm font-bold tracking-wide"
+              className="btn-ghost mt-5 inline-block rounded-full px-7 py-4 text-sm font-bold tracking-wide"
             >
               Découvrir les services
             </a>

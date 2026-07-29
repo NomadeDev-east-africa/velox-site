@@ -1,27 +1,20 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Logo from "@/components/Logo";
+import { CONTACT_EMAIL, EDITOR, MAILTO } from "@/lib/contact";
 
 /* Briques partagées par les pages légales (/confidentialite-*, /suppression-donnees-*).
    La page client historique /confidentialite garde son propre rendu. */
 
-/** Éditeur et adresses de contact, partagés par toutes les pages légales partenaires.
- *  La première adresse sert de destinataire par défaut aux liens mailto:. */
-export const EDITOR = "Velox Corp";
-export const CONTACT_EMAILS = ["devchirdon@gmail.com", "veloxon253@gmail.com"];
+/** Éditeur et adresse de contact — définis dans lib/contact.ts, réexportés ici
+ *  pour que les pages légales n'aient qu'un seul point d'import. */
+export { EDITOR, CONTACT_EMAIL } from "@/lib/contact";
 
 export function EmailLinks() {
   return (
-    <>
-      {CONTACT_EMAILS.map((mail, i) => (
-        <span key={mail}>
-          {i > 0 && <span className="text-faint"> · </span>}
-          <a href={`mailto:${mail}`} className="font-semibold text-neon">
-            {mail}
-          </a>
-        </span>
-      ))}
-    </>
+    <a href={MAILTO} className="font-semibold text-neon">
+      {CONTACT_EMAIL}
+    </a>
   );
 }
 
@@ -177,12 +170,8 @@ export function LegalPage({
     <>
       <header className="glass fixed inset-x-0 top-0 z-50 border-b border-neon/10 py-3">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8">
-          <Link
-            href="/"
-            className="relative h-9 w-28"
-            style={{ filter: "drop-shadow(0 0 14px rgba(155,255,58,.35))" }}
-          >
-            <Image src="/images/logo.png" alt="Velox" fill className="object-contain object-left" />
+          <Link href="/" aria-label="Velox — accueil">
+            <Logo size="sm" />
           </Link>
           <Link href="/#telecharger" className="btn-neon rounded-full px-6 py-2.5 text-sm font-bold">
             Télécharger
