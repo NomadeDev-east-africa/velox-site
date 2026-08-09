@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Logo from "@/components/Logo";
 import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_HREF, MAILTO } from "@/lib/contact";
+import { SectionBlock, type Section } from "@/components/legal/LegalPage";
 
 export const metadata: Metadata = {
   title: "Politique de confidentialité — Velox",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
     "Politique de confidentialité de l'application Velox : quelles données nous collectons, pourquoi, et quels sont vos droits.",
 };
 
-const sections = [
+const sections: Section[] = [
   {
     n: "01",
     title: "Données que nous collectons",
@@ -37,7 +38,10 @@ const sections = [
     items: [
       ["Restaurants et livreurs partenaires,", "pour exécuter votre commande."],
       ["Chauffeurs VTC,", "pour réaliser votre course."],
-      ["Prestataires techniques :", "Google Firebase (authentification, base de données, notifications, hébergement) et des services cartographiques (fonds de carte)."],
+      [
+        "Prestataires techniques :",
+        "Google Firebase (authentification, base de données, notifications, hébergement), OpenRouteService (calcul d'itinéraires à partir de votre position) et OpenStreetMap / Nominatim (recherche et conversion d'adresses).",
+      ],
     ],
     outro: "Nous ne vendons jamais vos données personnelles.",
   },
@@ -48,8 +52,24 @@ const sections = [
   },
   {
     n: "05",
-    title: "Conservation",
-    text: "Nous conservons vos données tant que votre compte est actif. Vous pouvez demander la suppression de votre compte et de vos données à tout moment (voir contact).",
+    title: "Conservation et suppression",
+    text: "Nous conservons vos données tant que votre compte est actif. Vous pouvez demander la suppression de votre compte à tout moment (voir contact) ; votre demande est traitée sous 30 jours maximum.",
+    items: [
+      [
+        "Supprimés immédiatement :",
+        "votre profil (nom, e-mail, téléphone, photo), vos identifiants de connexion et votre accès à l'Application.",
+      ],
+    ],
+    table: {
+      head: ["Donnée conservée", "Motif", "Durée"],
+      rows: [
+        [
+          "Historique de vos commandes et courses passées",
+          "Obligations comptables et gestion d'éventuels litiges",
+          "3 ans après la suppression du compte, puis suppression définitive",
+        ],
+      ],
+    },
   },
   {
     n: "06",
@@ -94,7 +114,7 @@ export default function Confidentialite() {
           Politique de confidentialité
         </h1>
         <span className="mt-3 block text-sm font-semibold text-neon-soft">
-          Dernière mise à jour : 27 juin 2026
+          Dernière mise à jour : 9 août 2026
         </span>
 
         <p className="mt-6 border-b border-white/5 pb-8 text-lg text-mist">
@@ -104,26 +124,7 @@ export default function Confidentialite() {
         </p>
 
         {sections.map((s) => (
-          <section key={s.n} className="mt-10">
-            <h2 className="flex items-baseline gap-3 font-display text-xl font-bold">
-              <span className="font-display text-base font-bold text-neon">{s.n}</span>
-              {s.title}
-            </h2>
-            {s.intro && <p className="mt-3 text-mist">{s.intro}</p>}
-            {s.text && <p className="mt-3 text-mist">{s.text}</p>}
-            {s.items && (
-              <ul className="mt-4 space-y-3">
-                {s.items.map(([strong, rest], i) => (
-                  <li key={i} className="relative pl-6 text-mist">
-                    <span className="absolute left-0 top-2.5 h-2 w-2 rounded-full bg-neon" style={{ boxShadow: "0 0 10px rgba(155,255,58,.5)" }} />
-                    {strong && <strong className="text-white">{strong} </strong>}
-                    {rest}
-                  </li>
-                ))}
-              </ul>
-            )}
-            {s.outro && <p className="mt-3 text-mist">{s.outro}</p>}
-          </section>
+          <SectionBlock key={s.n} section={s} />
         ))}
 
         <div className="mt-12 rounded-2xl border border-neon/20 bg-charcoal px-7 py-7">
