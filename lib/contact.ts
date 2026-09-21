@@ -10,3 +10,5 @@ export const CONTACT_PHONE = "+253 77 75 79 77";
 export const CONTACT_PHONE_HREF = "tel:+25377757977";
 
 export const CONTACT_CITY = "Djibouti-ville, Djibouti";
+
+export const DEVELOPER = "Moustapha Abobaker Mohamed";

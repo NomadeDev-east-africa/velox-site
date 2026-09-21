@@ -1,5 +1,12 @@
 import Logo from "./Logo";
-import { CONTACT_CITY, CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_HREF, MAILTO } from "@/lib/contact";
+import {
+  CONTACT_CITY,
+  CONTACT_EMAIL,
+  CONTACT_PHONE,
+  CONTACT_PHONE_HREF,
+  DEVELOPER,
+  MAILTO,
+} from "@/lib/contact";
 
 const cols = [
   {
@@ -60,6 +67,14 @@ export default function Footer() {
                   {l.label}
                 </a>
               ))}
+              {c.title === "Contact" && (
+                <div className="mt-5 border-t border-white/5 pt-4">
+                  <h5 className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-faint">
+                    Info développeur
+                  </h5>
+                  <p className="text-sm text-muted">Développeur : {DEVELOPER}</p>
+                </div>
+              )}
             </div>
           ))}
         </div>
